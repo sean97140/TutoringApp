@@ -1,0 +1,19 @@
+﻿<Window x:Class="TutorApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Menu Height="22" Name="menu1" Width="520" HorizontalAlignment="Left" VerticalAlignment="Top" Background="BlanchedAlmond">
+            <MenuItem Header="_Student">
+                <MenuItem Header="_New Student" Click="NewStudent" />
+                <MenuItem Header="_Open Profile" Click="OpenStudent" />
+                <MenuItem Header="S_et Up Appointment" Click="NewAppointment"/> 
+            </MenuItem >
+            <MenuItem Header="_Tutor">
+                <MenuItem Header="_Tutor Login" Click="Login_Click"/>
+                <MenuItem Header="_Check Student Progress"/>
+                <MenuItem Header="_Call Student"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>
