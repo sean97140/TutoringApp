@@ -35,6 +35,8 @@ namespace TutorApplication
             int numErrors = 0;
             try
             {
+                #region Error Validation
+                // Begin error validation checks using Regular Expressions
                 if (!Regex.IsMatch(f_name.Text, "[A-Za-z]"))
                 {
                     errorList.Add("First Name");
@@ -50,6 +52,25 @@ namespace TutorApplication
                     errorList.Add("Last Name");
                     numErrors++;
                 }
+                if (!Regex.IsMatch(subject.Text, "[A-Za-z]") && subject.Text.Length > 0)
+                {
+                    errorList.Add("Subject 1");
+                    numErrors++;
+                }
+                if (!Regex.IsMatch(subject2.Text, "[A-Za-z]") && subject2.Text.Length > 0)
+                {
+                    errorList.Add("Subject 2");
+                    numErrors++;
+                } 
+                if (!Regex.IsMatch(subject3.Text, "[A-Za-z]") && subject3.Text.Length > 0)
+                {
+                    errorList.Add("Subject 3");
+                    numErrors++;
+                }
+                // End error checking
+                #endregion
+
+                // If there are errors, print them out so the user can rectify...
                 if (numErrors > 0)
                 {
                     StringBuilder errorsToFix = new StringBuilder("");
@@ -62,12 +83,18 @@ namespace TutorApplication
                 }
                 else if (numErrors == 0)
                 {
-                    Console.WriteLine("Connecting to Students Database...");
+                    #region Database Handling
+                    // Open a connection to the database...
                     conn.Open();
-                    String sql = "INSERT INTO students.demographics(id, f_name, mi, l_name) VALUES(NULL, '" + f_name.Text + "', '" + mi.Text + "', '" + l_name.Text + "')";
+                    // Perform the first query...
+                    String sql = "INSERT INTO students.demographics(id, f_name, mi, l_name) VALUES('" + id.Text + "', '" + f_name.Text + "', '" + mi.Text + "', '" + l_name.Text + "')";
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Record entered successfully.", "Success!", MessageBoxButton.OK);
+                    // Perform the second SQL query...
+                    sql = "INSERT INTO students.subjectinfo(id, subject1, subject2, subject3) VALUES('" + id.Text + "', '" + subject.Text + "', '" + subject2.Text + "', '" + subject3.Text + "')";
+                    cmd = new MySqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    #endregion
                 }
             }
             catch (Exception ex)
