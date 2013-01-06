@@ -1,0 +1,17 @@
+﻿<Window x:Class="TutorApplication.StudentProfile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="StudentProfile" Height="300" Width="300">
+    <Grid>
+        <Button Content="Do it!" HorizontalAlignment="Left" Margin="105,229,0,0" VerticalAlignment="Top" Width="75" Name="SubmitBtn" Click="Submit_Click"/>
+        <Label Content="Score: " HorizontalAlignment="Left" Margin="208,10,0,0" VerticalAlignment="Top" Name="ScoreLbl"/>
+        <Label Content="Name: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Name="NameLbl"/>
+            <RadioButton Content="Take a quiz" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="239" Margin="25,52,0,0" Name="QuizRadio"/>
+            <RadioButton Content="Update my subject preferences" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="25,78,0,0" Name="SubjectRadio"/>
+        <RadioButton Content="Set up a tutoring appointment" HorizontalAlignment="Left" Margin="25,107,0,0" VerticalAlignment="Top" Name="TutorApptRadio"/>
+        <RadioButton Content="Call Tutor" HorizontalAlignment="Left" Margin="25,136,0,0" VerticalAlignment="Top" Name="CallTutorRadio"/>
+        <RadioButton Content="Go to Tutor Azad Facebook Page" HorizontalAlignment="Left" Margin="25,165,0,0" VerticalAlignment="Top" Name="FacebookRadio"/>
+        <RadioButton Content="Go to YouTube channel" HorizontalAlignment="Left" Margin="25,196,0,0" VerticalAlignment="Top" Name="YoutubeRadio"/>
+
+    </Grid>
+</Window>

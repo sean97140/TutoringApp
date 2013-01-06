@@ -7,13 +7,12 @@
             <MenuItem Header="_Student">
                 <MenuItem Header="_New Student" Click="NewStudent" />
                 <MenuItem Header="_Open Profile" Click="OpenStudent" />
-                <MenuItem Header="S_et Up Appointment" Click="NewAppointment"/> 
-            </MenuItem >
+            </MenuItem>
             <MenuItem Header="_Tutor">
                 <MenuItem Header="_Tutor Login" Click="Login_Click"/>
                 <MenuItem Header="_Check Student Progress"/>
-                <MenuItem Header="_Call Student"/>
             </MenuItem>
+            <MenuItem Header="Exit" Click="Exit_Click"/>
         </Menu>
     </Grid>
 </Window>

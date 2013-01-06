@@ -56,11 +56,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="OpenStudent.cs">
+    <Compile Include="CallTutor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OpenStudent.Designer.cs">
-      <DependentUpon>OpenStudent.cs</DependentUpon>
+    <Compile Include="CallTutor.Designer.cs">
+      <DependentUpon>CallTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenStudent.xaml.cs">
+      <DependentUpon>OpenStudent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SkypeCall.cs" />
+    <Compile Include="StudentProfile.xaml.cs">
+      <DependentUpon>StudentProfile.xaml</DependentUpon>
     </Compile>
     <Compile Include="TutorLogin.xaml.cs">
       <DependentUpon>TutorLogin.xaml</DependentUpon>
@@ -88,6 +95,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="OpenStudent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="StudentProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TutorLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -110,8 +125,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="OpenStudent.resx">
-      <DependentUpon>OpenStudent.cs</DependentUpon>
+    <EmbeddedResource Include="CallTutor.resx">
+      <DependentUpon>CallTutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -125,6 +140,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SKYPE4COMLib">
+      <Guid>{03282B5D-B38F-469D-849A-09B0A7F4881B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

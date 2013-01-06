@@ -25,28 +25,31 @@ namespace TutorApplication
             InitializeComponent();
         }
 
-        private void NewAppointment(object sender, RoutedEventArgs e)
-        {
-            Appointment a = new Appointment();
-            a.Show();
-        }
-
         private void NewStudent(object sender, RoutedEventArgs e)
         {
+            // Open a new student form...
             NewStudent n = new NewStudent();
             n.Show();
         }
 
         private void OpenStudent(object sender, RoutedEventArgs e)
         {
+            // Open the window to log in a student.
             OpenStudent o = new OpenStudent();
             o.Show();
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
+            // Open the window to log in a tutor.
             TutorLogin l = new TutorLogin();
             l.Show();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            // Closes the application.
+            this.Close();
         }
     }
 }
