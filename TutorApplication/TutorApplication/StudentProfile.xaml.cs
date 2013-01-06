@@ -45,6 +45,27 @@ namespace TutorApplication
         {
             if (QuizRadio.IsChecked == true)
             {
+                QuizPage q = new QuizPage();
+                this.Hide();
+                q.Show();
+            }
+            if (YoutubeRadio.IsChecked == true)
+            {
+                System.Diagnostics.Process.Start("http://www.youtube.com/user/tutorsean?feature=mhee");
+            }
+            if (FacebookRadio.IsChecked == true)
+            {
+                System.Diagnostics.Process.Start("http://www.facebook.com/tutorazadtutoring");
+            }
+            if (SubjectRadio.IsChecked == true)
+            {
+                // Open window to update student preferenced subjects
+                UpdateStudent u = new UpdateStudent();
+                this.Hide();
+                u.Show();
+            }
+            if (QuizRadio.IsChecked == true)
+            {
                 // Start a quiz
             }
             else if (SubjectRadio.IsChecked == true)

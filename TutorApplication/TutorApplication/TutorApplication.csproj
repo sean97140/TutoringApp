@@ -65,12 +65,18 @@
     <Compile Include="OpenStudent.xaml.cs">
       <DependentUpon>OpenStudent.xaml</DependentUpon>
     </Compile>
+    <Compile Include="QuizPage.xaml.cs">
+      <DependentUpon>QuizPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SkypeCall.cs" />
     <Compile Include="StudentProfile.xaml.cs">
       <DependentUpon>StudentProfile.xaml</DependentUpon>
     </Compile>
     <Compile Include="TutorLogin.xaml.cs">
       <DependentUpon>TutorLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStudent.xaml.cs">
+      <DependentUpon>UpdateStudent.xaml</DependentUpon>
     </Compile>
     <Page Include="Appointment.xaml">
       <SubType>Designer</SubType>
@@ -99,11 +105,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="QuizPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="StudentProfile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TutorLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,14 @@
+﻿<Window x:Class="TutorApplication.QuizPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="QuizPage" Height="300" Width="300">
+    <Grid>
+        <Button Content="Submit Answer" HorizontalAlignment="Left" Margin="96,227,0,0" VerticalAlignment="Top" Width="113" Click="Submit_Click"/>
+        <RadioButton HorizontalAlignment="Left" Margin="106,87,0,0" VerticalAlignment="Top" Name="Answer1"/>
+        <RadioButton HorizontalAlignment="Left" Margin="106,107,0,0" VerticalAlignment="Top" Name="Answer2"/>
+        <RadioButton HorizontalAlignment="Left" Margin="106,127,0,0" VerticalAlignment="Top" Name="Answer3"/>
+        <RadioButton HorizontalAlignment="Left" Margin="106,147,0,0" VerticalAlignment="Top" Name="Answer4"/>
+        <Label HorizontalAlignment="Left" Margin="90,20,0,0" VerticalAlignment="Top" Name="QuestionLbl"/>
+
+    </Grid>
+</Window>
